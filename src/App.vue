@@ -6,27 +6,32 @@ import HexContainerVue from './components/HexContainer.vue';
 
 <template>
   <header>
-    <!-- <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" /> -->
 
+  </header>
+
+  <main>
     <div class="wrapper">
       <!-- <HelloWorld msg="You did it!" /> -->
 
-      <HexContainerVue>
+      <HexContainerVue style="top: -70px; left: 70px;" url="about"> 
         <template #image>
-          <img src="https://picsum.photos/300/280" alt="">
+          <img src="https://picsum.photos/300/280?random=1" alt="">
         </template>
+        <template #text>about</template>
       </HexContainerVue>
 
-      <HexContainerVue>
+      <HexContainerVue style="top: 70px;">
         <template #image>
-          <img src="https://picsum.photos/300/280" alt="">
+          <img src="https://picsum.photos/300/280?random=2" alt="">
         </template>
+        <template #text>work</template>
       </HexContainerVue>
 
-      <HexContainerVue>
+      <HexContainerVue style="top: -70px; left: -70px;">
         <template #image>
-          <img src="https://picsum.photos/300/280" alt="">
+          <img src="https://picsum.photos/300/280?random=3" alt="">
         </template>
+        <template #text>contact</template>
       </HexContainerVue>
 
       <!-- <nav>
@@ -34,13 +39,13 @@ import HexContainerVue from './components/HexContainer.vue';
         <RouterLink to="/about">About</RouterLink>
       </nav> -->
     </div>
-  </header>
+  </main>
 
   <!-- <RouterView /> -->
 </template>
 
 <style scoped>
-header {
+main {
   line-height: 1.5;
   max-height: 100vh;
 }
@@ -76,7 +81,7 @@ nav a:first-of-type {
 }
 
 @media (min-width: 1024px) {
-  header {
+  main {
     display: flex;
     place-items: center;
     /* padding-right: calc(var(--section-gap) / 2); */
@@ -86,7 +91,7 @@ nav a:first-of-type {
     margin: 0 2rem 0 0;
   }
 
-  header .wrapper {
+  main .wrapper {
     display: flex;
     place-items: flex-start;
     flex-wrap: wrap;
