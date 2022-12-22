@@ -1,47 +1,21 @@
 <script setup>
-import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
-import HexContainerVue from './components/HexContainer.vue';
+import { RouterLink, RouterView } from 'vue-router';
 </script>
 
 <template>
-  <header>
-
+  <header style="writing-mode: vertical-rl; ">
+    <h2 style="font-size: 3rem; font-weight: 800;">Nikolas Adair</h2>
+    <p>Web Developer</p>
   </header>
 
   <main>
-    <div class="wrapper">
-      <!-- <HelloWorld msg="You did it!" /> -->
-
-      <HexContainerVue style="top: -70px; left: 70px;" url="about"> 
-        <template #image>
-          <img src="https://picsum.photos/300/280?random=1" alt="">
-        </template>
-        <template #text>about</template>
-      </HexContainerVue>
-
-      <HexContainerVue style="top: 70px;">
-        <template #image>
-          <img src="https://picsum.photos/300/280?random=2" alt="">
-        </template>
-        <template #text>work</template>
-      </HexContainerVue>
-
-      <HexContainerVue style="top: -70px; left: -70px;">
-        <template #image>
-          <img src="https://picsum.photos/300/280?random=3" alt="">
-        </template>
-        <template #text>contact</template>
-      </HexContainerVue>
-
+    <nav><RouterView /></nav>
+    
       <!-- <nav>
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">About</RouterLink>
       </nav> -->
-    </div>
   </main>
-
-  <!-- <RouterView /> -->
 </template>
 
 <style scoped>
@@ -94,7 +68,7 @@ nav a:first-of-type {
   main .wrapper {
     display: flex;
     place-items: flex-start;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
   }
 
   nav {
