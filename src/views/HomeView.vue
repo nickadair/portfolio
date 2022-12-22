@@ -5,90 +5,58 @@ import HexContainer from '../components/HexContainer.vue';
 <template>
   <!-- <main> -->
     <div class="wrapper">
-      <HexContainer style="top: -70px; left: 70px;" url="about"> 
+      <HexContainer class="left" url="about"> 
         <template #image>
           <img src="https://picsum.photos/300/280?random=1" alt="">
         </template>
         <template #text><RouterLink to="/">Home</RouterLink></template>
       </HexContainer>
 
-      <HexContainer style="top: 70px;">
+      <HexContainer class="middle">
         <template #image>
           <img src="https://picsum.photos/300/280?random=2" alt="">
         </template>
-        <template #text>work</template>
+        <template #text><RouterLink to="/work">Work</RouterLink></template>
       </HexContainer>
 
-      <HexContainer style="top: -70px; left: -70px;">
+      <HexContainer class="right">
         <template #image>
           <img src="https://picsum.photos/300/280?random=3" alt="">
         </template>
-        <template #text>contact</template>
+        <template #text><RouterLink to="/contact">contact</RouterLink></template>
       </HexContainer>
       </div>
   <!-- </main> -->
 </template>
 
 <style scoped>
-header {
-  line-height: 1.5;
-  max-height: 100vh;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-nav {
-  width: 100%;
-  font-size: 12px;
-  text-align: center;
-  margin-top: 2rem;
-}
-
-nav a.router-link-exact-active {
-  color: var(--color-text);
-}
-
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
-}
-
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
-}
-
-nav a:first-of-type {
-  border: 0;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
+  .hex-container.left {
+    top: -70px; 
+    left: 70px;
   }
 
-  .logo {
-    margin: 0 2rem 0 0;
+  .hex-container.middle {
+    top: 70px;     
   }
 
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
+  .hex-container.right {
+    top: -70px; 
+    left: -70px;
   }
 
-  nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
+  @media (max-width: 767px) {
+    .hex-container.left {
+    top: unset; 
+    left: unset;
+  }
 
-    padding: 1rem 0;
-    margin-top: 1rem;
+  .hex-container.middle {
+    top: unset;     
+  }
+
+  .hex-container.right {
+    top: unset; 
+    left: unset;
   }
 }
 </style>

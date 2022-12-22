@@ -3,18 +3,13 @@ import { RouterLink, RouterView } from 'vue-router';
 </script>
 
 <template>
-  <header style="writing-mode: vertical-rl; ">
-    <h2 style="font-size: 3rem; font-weight: 800;">Nikolas Adair</h2>
-    <p>Web Developer</p>
+  <header>
+    <h2>Nikolas Adair</h2>
+    <p class="vert">Web Developer</p>
   </header>
 
   <main>
     <nav><RouterView /></nav>
-    
-      <!-- <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav> -->
   </main>
 </template>
 
@@ -24,60 +19,55 @@ main {
   max-height: 100vh;
 }
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
 nav {
   width: 100%;
   font-size: 12px;
   text-align: center;
-  margin-top: 2rem;
 }
 
-nav a.router-link-exact-active {
-  color: var(--color-text);
+header {
+  position: absolute;
+  top: 5px;
 }
 
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
+header h2 {
+  font-size: 3rem; 
+  font-weight: 800;
 }
 
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
-}
+header p.vert {
+    writing-mode: vertical-rl;
+  }
 
-nav a:first-of-type {
-  border: 0;
-}
-
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   main {
     display: flex;
     place-items: center;
-    /* padding-right: calc(var(--section-gap) / 2); */
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
+    margin: 0 auto;
   }
 
   main .wrapper {
     display: flex;
     place-items: flex-start;
-    /* flex-wrap: wrap; */
+    margin: 0 auto;
+  }    
+}
+
+@media (max-width: 767px) {
+  main {
+    display: block;
   }
 
-  nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
+  main .wrapper {
+    display: flex;
+    place-items: center;
+    flex-direction: column;
+    gap: .5rem;
+  }  
 
-    padding: 1rem 0;
-    margin-top: 1rem;
+  header {
+    position: unset;
+    top: unset;
   }
 }
 </style>
