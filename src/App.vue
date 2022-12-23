@@ -56,6 +56,9 @@ header p.vert {
 @media (max-width: 767px) {
   main {
     display: block;
+    position: absolute;
+    top: 8rem;
+    width: 100%;
   }
 
   main .wrapper {
@@ -68,6 +71,10 @@ header p.vert {
   header {
     position: unset;
     top: unset;
+  }
+
+  nav {
+    margin: 0 auto;
   }
 }
 </style>

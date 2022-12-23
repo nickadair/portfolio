@@ -17,8 +17,8 @@
             padding: 0;
             filter: grayscale(100%);
             transition: filter .75s ease;
-            max-width: 12rem;
-            max-height: 12rem;
+            /* max-width: 12rem;
+            max-height: 12rem; */
         }  
     }
     
