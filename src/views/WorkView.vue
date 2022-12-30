@@ -1,9 +1,10 @@
-<template>
-  <div class="about">
-    <h1>This is a work page</h1>
-  </div>
+<script setup>
+  import HexMenu from '../components/HexMenu.vue';
+</script>
 
-  <RouterLink to="/">Home</RouterLink>
+<template>
+    <HexMenu></HexMenu>
+  
 </template>
 
 <style>

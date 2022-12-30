@@ -34,3 +34,29 @@
     flex-direction: column;
   }
 }
+
+a.big-link,
+a.big-link:link,
+a.big-link:visited,
+a.big-link:focus,
+a.big-link:hover,
+a.big-link:active {
+    font-size: 1.5rem;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color: transparent;
+}
+
+a.menu-link,
+a.menu-link:link,
+a.menu-link:visited,
+a.menu-link:focus,
+a.menu-link:hover,
+a.menu-link:active {
+    font-size: .75rem;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color: transparent;
+}

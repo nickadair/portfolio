@@ -9,21 +9,21 @@ import HexContainer from '../components/HexContainer.vue';
         <template #image>
           <img src="https://picsum.photos/300/280?random=1" alt="">
         </template>
-        <template #text><RouterLink to="/">Home</RouterLink></template>
+        <template #text><RouterLink class="big-link" to="/">Home</RouterLink></template>
       </HexContainer>
 
       <HexContainer class="middle">
         <template #image>
           <img src="https://picsum.photos/300/280?random=2" alt="">
         </template>
-        <template #text><RouterLink to="/work">Work</RouterLink></template>
+        <template #text><RouterLink class="big-link" to="/work">Work</RouterLink></template>
       </HexContainer>
 
       <HexContainer class="right">
         <template #image>
           <img src="https://picsum.photos/300/280?random=3" alt="">
         </template>
-        <template #text><RouterLink to="/contact">contact</RouterLink></template>
+        <template #text><RouterLink class="big-link" to="/contact">contact</RouterLink></template>
       </HexContainer>
       </div>
   <!-- </main> -->

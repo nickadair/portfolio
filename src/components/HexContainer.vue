@@ -37,20 +37,13 @@
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
+    font-size: 1.5rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;    
 }
 
 .hex:hover {
     filter: none;
-}
-
-.hex .hex-inner a {
-    font-size: 1.5rem;
-    text-transform: uppercase;
-    text-decoration: none;
-    color: white;
-}
-
-.hex .hex-inner a:hover {
-    text-decoration: underline;
 }
 </style>
