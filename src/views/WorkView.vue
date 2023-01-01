@@ -3,8 +3,7 @@
 </script>
 
 <template>
-    <HexMenu></HexMenu>
-  
+    
 </template>
 
 <style>

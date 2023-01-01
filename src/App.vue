@@ -1,11 +1,17 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router';
+import HexMenu from './components/HexMenu.vue';
 </script>
 
 <template>
   <header>
-    <h2>Nikolas Adair</h2>
-    <p class="vert">Web Developer</p>
+    <div class="title">
+      <h2>Nikolas Adair</h2>
+      <p class="vert">Web Developer</p>
+    </div>  
+    <div class="menu">
+      <HexMenu v-if="$route.name!=='home'" />       
+    </div>
   </header>
 
   <main>
@@ -51,6 +57,16 @@ header p.vert {
     place-items: flex-start;
     margin: 0 auto;
   }    
+
+  header {
+    width: 90vw;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .menu {
+    display: flex;
+  }
 }
 
 @media (max-width: 767px) {
