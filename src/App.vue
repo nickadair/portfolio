@@ -15,7 +15,7 @@ import HexMenu from './components/HexMenu.vue';
   </header>
 
   <main>
-    <nav><RouterView /></nav>
+    <RouterView />
   </main>
 </template>
 
@@ -23,12 +23,6 @@ import HexMenu from './components/HexMenu.vue';
 main {
   line-height: 1.5;
   max-height: 100vh;
-}
-
-nav {
-  width: 100%;
-  font-size: 12px;
-  text-align: center;
 }
 
 header {
@@ -45,11 +39,16 @@ header p.vert {
     writing-mode: vertical-rl;
   }
 
+.menu {
+  z-index: 10;
+}
+
 @media (min-width: 768px) {
   main {
     display: flex;
     place-items: center;
     margin: 0 auto;
+    flex-direction: column;
   }
 
   main .wrapper {
@@ -87,10 +86,6 @@ header p.vert {
   header {
     position: unset;
     top: unset;
-  }
-
-  nav {
-    margin: 0 auto;
   }
 }
 </style>
