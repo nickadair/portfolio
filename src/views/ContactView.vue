@@ -1,9 +1,10 @@
 <template>
-  <div class="about">
-    <h1>This is a contact page</h1>
+  <div class="contact-info">    
+    <a href="mailto:nick.adair@live.com">
+      <i class="fa fa-envelope" />
+      nick.adair@live.com
+    </a>
   </div>
-
-  <RouterLink to="/">Home</RouterLink>
 </template>
 
 <style>
@@ -12,6 +13,21 @@
     min-height: 100vh;
     display: flex;
     align-items: center;
+  }
+
+  .contact-info {
+    color: black;
+    font-size: 2rem;
+  }
+
+  .contact-info a {
+    color: black;
+    text-decoration: none;
+  }
+
+  .contact-info a:hover {
+    background-color: transparent;
+    text-decoration: underline;
   }
 }
 </style>
